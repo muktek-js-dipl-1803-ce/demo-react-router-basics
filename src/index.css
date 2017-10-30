@@ -1,0 +1,65 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: sans-serif;
+  text-align: center;
+}
+
+nav {
+  background: royalblue;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  color: #fff;
+}
+
+nav h4 {
+  font-weight: 200;
+}
+
+nav a {
+  font-size: 18px;
+  padding: 10px;
+  border: 1px solid #fff;
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+}
+
+
+.page--home{
+  background: darkolivegreen;
+  min-height: 50vh;
+  padding: 20px;
+  color: #fff;
+}
+
+.page--about{
+  background: darkslateblue;
+  min-height: 50vh;
+  padding: 20px;
+  color: #fff;
+}
+
+.page--dynamic{
+  background: darkgoldenrod;
+  min-height: 50vh;
+  padding: 20px;
+  color: #fff;
+}
+
+h1 {
+  font-size: 10vh;
+}
+
+.username{
+  background: lightyellow;
+  width: 250px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
+
+}
