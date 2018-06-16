@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+/* (RR - 3) Import Route, and Switch Components */
 import {Route, Switch, Link} from 'react-router-dom'
 
 class HomeView extends Component {
@@ -64,6 +65,10 @@ class App extends Component {
     return (
       <div>
           <Nav/>
+          {/* (RR - 4) Inside <Switch/> Declare Route components
+                  Note:  <Route/> requires route-path and component
+                          to be passed as props  
+          */}
           <Switch>
             <Route exact path="/user/:uname/post/:postId" component={DynamicView}/>
             <Route exact path="/user/:uname" component={DynamicView}/>
