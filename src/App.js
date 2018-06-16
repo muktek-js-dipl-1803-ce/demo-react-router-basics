@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import {Route, Link, Switch} from 'react-router-dom'
-
+import {Route, Switch, Link} from 'react-router-dom'
 
 class HomeView extends Component {
   render(){
@@ -24,7 +23,7 @@ class AboutView extends Component {
 
 class DynamicView extends Component {
   render(){
-    let usernameInRoute = this.props.match.params.username
+    let usernameInRoute = this.props.match.params.uname
     return(
       <section className="page--dynamic" >
         <h1>UserName</h1>
@@ -60,17 +59,19 @@ class NoMatch extends Component {
   }
 }
 
-
 class App extends Component {
   render() {
     return (
       <div>
           <Nav/>
           <Switch>
-            <Route path="/user/:username" component={DynamicView}/>
+            <Route exact path="/user/:uname/post/:postId" component={DynamicView}/>
+            <Route exact path="/user/:uname" component={DynamicView}/>
             <Route exact path="/about" component={AboutView}/>
             <Route exact path="/" component={HomeView}/>
+            <Route component={NoMatch}/>
           </Switch>
+
       </div>
     );
   }
